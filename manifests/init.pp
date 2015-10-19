@@ -9,8 +9,8 @@ class cloudpassage {
   }
 
   include cloudpassage::params, cloudpassage::data
-  include cloudpassage::install, cloudpassage::firstart, cloudpassage::service
+  include cloudpassage::install, cloudpassage::configure, cloudpassage::service
 
-  Class['cloudpassage::install'] ~> Class['cloudpassage::firstart'] ~> Class['cloudpassage::service']
+  Class['cloudpassage::install'] ~> Class['cloudpassage::configure'] ~> Class['cloudpassage::service']
 
 }

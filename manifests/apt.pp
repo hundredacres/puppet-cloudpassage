@@ -7,7 +7,7 @@ class cloudpassage::apt {
   }
 
   exec { 'cloudpassage.key':
-    command   => 'curl http://packages.cloudpassage.com/cloudpassage.packages.key | apt-key add -',
+    command   => 'curl https://packages.cloudpassage.com/cloudpassage.packages.key | apt-key add -',
     path      => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
     logoutput => on_failure,
     notify    => Exec['apt_update'],
