@@ -4,7 +4,7 @@ class cloudpassage {
   # I recommends puppetlabs-apt for apt
   case $::operatingsystem {
     /(?i:debian|ubuntu)/:        { include cloudpassage::apt }
-    /(?i:redhat|centos|fedora)/: { include cloudpassage::yum }
+    /(?i:redhat|centos|fedora|amazon)/: { include cloudpassage::yum }
     default: {}
   }
 
