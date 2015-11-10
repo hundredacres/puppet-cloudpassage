@@ -15,7 +15,7 @@ class cloudpassage::params {
 
   $hasstatus = $::operatingsystem ? {
     /(?i:debian|ubuntu)/        => false,
-    /(?i:redhat|centos|fedora)/ => true,
+    /(?i:redhat|centos|fedora|amazon)/ => true,
   }
 
   $configfile = $::operatingsystem ? {
