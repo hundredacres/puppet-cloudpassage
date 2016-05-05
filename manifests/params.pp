@@ -1,6 +1,12 @@
 class cloudpassage::params {
+  $apikey = '11111111111111111111111111111111111'
+  $agentkey = '22222222222222222222222222222222222'
+  $repokey = '33333333333333333333333333333333333'
+  $tags = $::operatingsystem
+  $dns = true
+  $readonly = false
 
-# (Modify only to adapt to unsupported OSes)
+  # (Modify only to adapt to unsupported OSes)
   $packagename = $::operatingsystem ? {
     default => 'cphalo',
   }
