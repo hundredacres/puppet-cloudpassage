@@ -5,6 +5,9 @@ class cloudpassage::params {
   $tags = $::operatingsystem
   $dns = true
   $readonly = false
+  $manage_repo = true
+  $service_ensure = 'running'
+  $service_enable = true
 
   # (Modify only to adapt to unsupported OSes)
   $packagename = $::operatingsystem ? {
