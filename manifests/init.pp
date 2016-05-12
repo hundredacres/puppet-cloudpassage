@@ -31,6 +31,9 @@ class cloudpassage(
     }
   }
 
-  Class['cloudpassage::install'] ~> Class['cloudpassage::configure'] ~> Class['cloudpassage::service']
+  class{ '::cloudpassage::install': } ->
+  class{ '::cloudpassage::configure': } ~>
+  class{ '::cloudpassage::service': } ->
+  Class['::cloudpassage']
 
 }
